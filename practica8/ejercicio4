@@ -1,0 +1,3 @@
+|val|
+val:=(Integer primesUpTo: 20).
+Transcript show: val asString,' '. 

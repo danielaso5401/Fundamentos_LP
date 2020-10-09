@@ -1,0 +1,7 @@
+| valor|
+valor:= UIManager default request: 'enter first value'.
+valor:= valor asNumber .
+
+((valor isDivisibleBy: 400) | (valor isDivisibleBy: 4) & (valor isDivisibleBy:  100) not )
+ifTrue: [ Transcript  show:valor  asString, ' bisiesto'. ]
+ifFalse: [Transcript  show:valor  asString, ' no es bisiesto'. ]

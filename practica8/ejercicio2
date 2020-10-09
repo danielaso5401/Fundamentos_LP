@@ -1,0 +1,9 @@
+| valor |
+    valor :=UIManager default request: 'enter first value'.
+    valor :=valor asNumber.
+    valor even 
+    	ifTrue: [ 
+    		Transcript show: valor; show:' es par';cr .]
+    	ifFalse: [ 
+    		Transcript show: valor; show:' es impar';cr. 
+    ]
