@@ -1,0 +1,20 @@
+sheldon2: n
+|x r pos res aux str str2|
+x:=0.
+r:=1.
+res:=1.
+pos:=0.
+
+[x<n] whileTrue: [ 
+	str2:=''.
+	((self verif: r)=true) ifTrue: [ 
+		pos:=pos+1.
+		x:=x+1. 
+		str := '', r asString.
+		str reverseDo: [ :each | str2:=str2,each; cr ].
+		Transcript show: str asString , ''.
+	].
+	str2:=str2 asNumber.
+	((self verif: str2)=true) ifTrue:[Transcript show: str asString , 'si es  espejo primo'.]
+	r:=r+1
+]

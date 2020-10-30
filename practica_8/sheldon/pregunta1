@@ -1,0 +1,20 @@
+x:x x2:x2 y:y y2:y2 r:r r1:r1
+| pc pc2 |
+pc:=((x-x2)*(x-x2))+((y-y2)*(y-y2)).
+pc2:=(r+r1)*(r+r1).
+(pc=pc2)
+ifTrue: [ 
+	Transcript show: 'se interseptan '.
+].
+(pc>pc2)
+ifTrue: [ 
+	Transcript show: 'no se interseptan '.
+].
+(pc<pc2)
+ifTrue: [ 
+	Transcript show: 'se interseptan '.
+]
+
+|obj result|
+obj:=Pract_8  new.
+result := obj x:3 x2:14 y:4 y2:18 r:5 r1:8
