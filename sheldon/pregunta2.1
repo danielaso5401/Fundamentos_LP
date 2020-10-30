@@ -1,0 +1,38 @@
+verif:n
+|ac|
+ac:=true.
+(n=0)ifTrue: [ ac:=false. ].
+(n=1)ifTrue: [ ac:=false. ].
+(ac=true)
+ifTrue: [ 
+	2 to: (n/2) do: [:x | 
+		((n%x)=0)ifTrue: [ ac:=false. ].
+	].
+].
+^ac.
+sheldon2: n
+|x r pos res aux str result|
+x:=0.
+r:=1.
+res:=1.
+pos:=0.
+
+[x<n] whileTrue: [ 
+	((self verif: r)=true) ifTrue: [ 
+		pos:=pos+1.
+		x:=x+1. 
+		str:= r asString.
+		str:= str reverse.
+		result:= str asNumber.
+		((self verif: result)=true) ifTrue:[
+			Transcript show: '|cumple -> '.
+			Transcript show: r  asString , ' es primo y su espejo es:'.
+			Transcript show: result  asString , String cr.
+		].
+	].
+
+	r:=r+1
+]
+|obj result|
+obj:=Pract_8  new.
+result := obj sheldon2: 21.

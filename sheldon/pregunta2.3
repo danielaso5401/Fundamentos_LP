@@ -1,0 +1,45 @@
+binari:n
+|str aux|
+str:=''.
+aux:=n.
+(aux>0)
+ifTrue: [  
+	[ aux>0 ] 
+	whileTrue: [ 
+		((aux%2)=0) 
+		ifTrue: [str:='0',str.]
+		ifFalse: [str:='1',str.].
+		aux:=aux//2
+			
+	].
+]
+ifFalse: [ str:='0'].
+^str.
+
+sheldon3
+|x r pos res aux str str2|
+x:=0.
+r:=1.
+res:=1.
+pos:=0.
+[x<10] whileTrue: [ 
+	res:=1.
+	((self verif: r)=true) ifTrue: [ 
+		pos:=pos+1.
+		x:=x+1. 
+		aux:=r.
+		str:=self binari:r.		
+		str2 := str reverse.
+		(str=str2 )
+		ifTrue: [ 
+			Transcript show: r  asString , ' es primo y su binario es: '.
+			str:=self binari:r.
+			Transcript show: str , '  y es espejo', String cr.
+		].
+	].
+	r:=r+1
+]
+
+|obj result|
+obj:=Pract_8  new.
+result := obj sheldon3.
