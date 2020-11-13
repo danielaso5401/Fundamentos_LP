@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 1</title>
+</head>
+<body>
+<script>
+const number = parseInt(prompt('Ingresa numero de terminos: '));
+console.log('Serie:');
+function fibo(number){ 	
+	var a1 = 0, a2 = 1, sig;
+	for (let i = 1; i <= number+1; i++) {
+	    console.log(a1);
+	    sig = a1 + a2;
+	    a1 = a2;
+	    a2 = sig;
+	}
+}
+fibo(number);
+</script>
+</body>
+</html>

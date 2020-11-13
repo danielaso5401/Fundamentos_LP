@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 4 iterativa</title>
+</head>
+<body>
+<script>
+var number = parseInt(prompt('Ingresa numero: '));	
+function factorial(number){
+   if(number==0){
+   	return 1;
+   }
+   var i=number, fact=1;
+   while(number/i!=number){
+   	fact=fact*i;
+   	i=i-1;
+   }
+   return fact;
+
+}
+console.log(factorial(number));
+
+</script>
+</body>
+</html>

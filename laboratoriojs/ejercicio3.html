@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 3</title>
+</head>
+<body>
+<script>
+var number = parseInt(prompt('Ingresa numero: '));	
+function p(number) { 
+              
+            var i, flag = true; 
+
+       
+            for(i = 2; i <= number - 1; i++) 
+                if (number % i == 0) { 
+                    flag = false; 
+                    break; 
+                } 
+
+            if (flag == true) 
+                console.log(number + " es primo"); 
+            else
+                console.log(number + " no es primo"); 
+}
+p(number);
+
+</script>
+</body>
+</html>
