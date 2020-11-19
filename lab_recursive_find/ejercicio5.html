@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+function isEven ( num ) { return ( num %2 == 0) ; }	
+function find_recursive (arr, f, par = []){
+
+   if(arr.length>0){
+      	val=arr.shift();
+      	if(f(val)==1){
+       		par.push(val);
+   		};
+      	return find_recursive(arr,f,par);
+   };
+   return par;
+};
+result=find_recursive([1 , 3, 5, 4, 2],isEven);
+console .log (" resuld find_recursive :", result );
+
+</script>
+</body>
+</html>
