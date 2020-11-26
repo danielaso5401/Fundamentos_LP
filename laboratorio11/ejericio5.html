@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var personnel = [
+		{
+		id: 5 ,
+		name : " Luke Skywalker ",
+		pilotingScore : 98 ,
+		shootingScore : 56 ,
+		isForceUser : true ,
+		},
+		{
+		id: 82 ,
+		name : " Sabine Wren ",
+		pilotingScore : 73 ,
+		shootingScore : 99 ,
+		isForceUser : false ,
+		},
+		{
+		id: 22 ,
+		name : "Zeb Orellios ",
+		pilotingScore : 20 ,
+		shootingScore : 59 ,
+		isForceUser : false ,
+		},
+		{
+		id: 15 ,
+		name : " Ezra Bridger ",
+		pilotingScore : 43 ,
+		shootingScore : 67 ,
+		isForceUser : true ,
+		},
+		{
+		id: 11 ,
+		name : " Caleb Dume ",
+		pilotingScore : 71 ,
+		shootingScore : 85 ,
+		isForceUser : true ,
+		}
+	];
+	function iter(personnel){
+		var sum=0;
+		for(var i=0; i<personnel.length; i++){
+			if (personnel[i].isForceUser===true){
+				sum=sum+personnel[i].shootingScore+personnel[i].pilotingScore;
+			}
+		}
+		return sum;
+	};
+	var it=iter(personnel);
+	console.log(it);
+	const promo=personnel.filter(v => v.isForceUser === true).map (v => v.shootingScore+v.pilotingScore ).reduce (( sum , shootingScore, i, array ) => sum + shootingScore , 0) ;
+	console.log(promo);
+
+</script>
+</body>
+</html>

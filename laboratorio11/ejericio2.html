@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+let tasks = [
+	{	
+	'name' : 'Buy milk from the shop',
+	'duration' : 20 ,
+	'priority' : 1
+	},
+	{
+	'name' : 'Clean the house',
+	'duration' : 120 ,
+	'priority' : 3
+	},
+	{
+	'name' : 'Study JS functions',
+	'duration'  : 180 ,
+	'priority' : 1
+	}
+];
+function most(tasks){
+	for (var i = 0; i <tasks.length; i++) {
+	   console.log("priority: ",tasks[i].priority);
+	}
+};
+most(tasks);
+
+var mostrar=tasks.map(x=>x.priority);
+console.log("priority: ",mostrar)
+
+</script>
+</body>
+</html>
