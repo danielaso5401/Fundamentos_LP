@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+/*una fisrt class es considerado 
+un objeto que permite todas las 
+operaciones
+como estas:
+Pueden ser nombrados por variables.
+Pueden pasarse como argumentos a los procedimientos.
+Pueden devolverse como resultado de los procedimientos.
+Pueden incluirse en estructuras de datos.
+*/
+function speak(cad){
+	console.log(cad);
+};
+var vet=speak;//estar almacenada en una variable
+
+function ret(fn){//pasar como argumento de una funcion
+	return (fn);
+};
+var set=ret(speak);//ser devuelto por una funcion
+
+var arr=[speak];//estar almacenando en una estuctura
+speak.myProperty="hola mundo";
+console.log(speak.myProperty); //tener sus propiedades y metodos	
+</script>
+</body>
+</html>

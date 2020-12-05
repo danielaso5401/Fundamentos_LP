@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script src ="ramda.min.js" > </script >
+<script>
+/*El curry siempre produce funciones unarias (1-arias) 
+anidadas. La función transformada sigue siendo en gran 
+medida la misma que la original.
+*/
+function sum(a1,a2){
+	return(a1+a2);
+};
+
+const curr_sum=R.curry(sum);
+const sum_ele=curr_sum(1);
+alert(sum_ele(3));
+
+</script>
+</body>
+</html>

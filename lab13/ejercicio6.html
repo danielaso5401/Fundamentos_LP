@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+function abc (a, b, c){
+	return a+b+c;
+}
+function curry (f) {
+	return function ret(...a) {
+		if(a.length>=f.length){
+			return f.apply(this,a);
+		}
+		else{
+		    return function(...b) {
+		    	return ret.apply(this,a.concat(b));
+		    };
+		}
+	};
+}
+var curriedAbc = curry ( abc );
+console.log ( curriedAbc (2) (3) (4) ); // 9
+console.log ( curriedAbc (2 ,3) (4) ); // 9
+console.log ( curriedAbc (2) (3 ,4) ); // 9
+console.log ( curriedAbc (2 ,3 ,4) ) ; // 9
+</script>
+</body>
+</html>

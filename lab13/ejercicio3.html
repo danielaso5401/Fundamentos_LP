@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script src ="ramda.min.js" > </script >
+<script type="text/javascript">
+function volumen(area,altura){
+	return(area*altura);
+};
+alert(volumen(5,4));
+
+const aux=R.curry(volumen);
+const area=aux(5);
+alert(area(4));
+</script>
+</body>
+</html>

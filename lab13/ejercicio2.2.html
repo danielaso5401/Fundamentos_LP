@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+/*La aplicación parcial produce funciones de 
+aridad arbitraria. La función transformada es
+diferente de la original: necesita menos argumentos.
+*/
+var aplicacion = function(fn,...outerArgs){
+	return function (...innerArgs){
+		return fn(...outerArgs,...innerArgs);
+	};
+};
+function sum(a,b,c){
+	return (a+b+c);
+};
+var aux=aplicacion(sum,2,3);
+var aux2=aux(4);
+alert(aux2);
+</script>
+</body>
+</html>

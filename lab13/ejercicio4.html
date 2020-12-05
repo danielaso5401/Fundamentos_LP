@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+function joinWords(a) {
+    return b => b === undefined ? a : joinWords(a.concat(b));
+};
+
+
+result = joinWords('Hello')();
+console.log(result); // Hello
+result = joinWords('There ')('is ')('no ')('spoon .')();
+console.log (result); // There is no spoon .
+
+</script>
+</body>
+</html>
