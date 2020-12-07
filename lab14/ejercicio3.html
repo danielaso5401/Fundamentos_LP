@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+function memoize(func) {
+  var memo = {};
+  var slice = Array.prototype.slice;
+
+  return function() {
+    var args = slice.call(arguments);
+
+    if (args in memo)
+      return memo[args];
+    else
+      return (memo[args] = func.apply(this, args));
+
+  }
+}
+
+function fib(n) {
+  if (n <= 1) return 1;
+  return fib(n - 1) + fib(n - 2);
+}
+
+fib = memoize(fib);
+
+console.log(fib(100));
+</script>
+</body>
+</html>

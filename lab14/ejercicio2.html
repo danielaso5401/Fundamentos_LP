@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+function fact(key,cache=[1]) {
+    if (!cache[key]) {
+      cache[key] = key * fact(key - 1)
+    }
+    return cache[key]
+};
+function sen(x,num,n=1,marca=0){
+	if(n>100){
+		return (num);
+	}		
+	if (marca%2===0){
+		num=Math.pow(x,n)/fact(n);	
+		num=num*+1;
+	}
+	else{
+		num=Math.pow(x,n)/fact(n);
+		num=num*-1;
+	}
+	
+	return num+sen(x,num,n+2,marca=marca+1);
+
+};
+function cos(x,num,n=0,marca=0){
+	if(n>100){
+		return (num);
+	}		
+	if (marca%2===0){
+		num=Math.pow(x,n)/fact(n);	
+		num=num*+1;
+	}
+	else{
+		num=Math.pow(x,n)/fact(n);
+		num=num*-1;
+	}
+	
+	return num+sen(x,num,n+2,marca=marca+1);
+}
+
+alert(sen(20));
+alert(cos(20));
+</script>
+</body>
+</html>

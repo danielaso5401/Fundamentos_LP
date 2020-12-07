@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+function fact(key,cache=[1]) {
+    if (!cache[key]) {
+      cache[key] = key * fact(key - 1)
+    }
+    return cache[key]
+}
+function euler(num,n=0){
+	if(num<0.0001){
+		return (num);
+	}
+	
+	num=1/fact(n);
+
+	return num+euler(num,n+1);
+};
+
+alert(euler());
+</script>
+</body>
+</html>
